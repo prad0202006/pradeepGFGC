@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFGC HSR Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #222;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+            font-size: 18px;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            background: white;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to GOVERNMENT FIRST GRADE COLLEGE HSR Layout</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About Us</a>
+        <a href="#" onclick="showSection('academics')">Academics</a>
+        <a href="#" onclick="showSection('admissions')">Admissions</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h2>Welcome to Our College</h2>
+        <p>Your gateway to excellence in education. Explore our programs, history, and admissions process.</p>
+        <img src="https://source.unsplash.com/800x400/?college" alt="College Image">
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our mission is to provide high-quality education that fosters innovation, leadership, and a lifelong love for learning.</p>
+        <p>Founded in [Year], GFGC HSR Layout has been a center for academic excellence in Bangalore.</p>
+    </section>
+
+    <section id="academics">
+        <h2>Academics</h2>
+        <ul>
+            <li>Bachelor of Computer Applications (BCA)</li>
+            <li>Bachelor of Business Administration (BBA)</li>
+            <li>Bachelor of Science (B.Sc.)</li>
+            <li>Bachelor of Arts (BA)</li>
+        </ul>
+    </section>
+
+    <section id="admissions">
+        <h2>Admissions</h2>
+        <p>Fill out the application form <a href="#">here</a>.</p>
+        <p>Application Deadline: June 30, 2025</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: gfgc.hsr@example.com</p>
+        <p>Phone: 123-456-7890</p>
+        <p>Address: 2486, 15th Cross Rd, HSR Layout, Bengaluru, Karnataka 560102</p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
